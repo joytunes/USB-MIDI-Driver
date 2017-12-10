@@ -3,20 +3,20 @@ apply plugin: 'com.android.library'
 
 repositories {
     maven {
-        url 'https://github.com/kshoji/javax.sound.midi-for-Android/raw/master/javax.sound.midi/repository'
+        url 'https://github.com/kshoji/javax.sound.midi-for-Android/raw/develop/javax.sound.midi/repository'
     }
     mavenCentral()
 }
 
 dependencies {
-    compile 'jp.kshoji:javax-sound-midi:0.0.3:@aar'
-    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'jp.kshoji:javax-sound-midi:0.0.4-SNAPSHOT:@aar'
+    compile 'com.android.support:support-annotations:25.3.1'
     compile fileTree(dir: 'libs', include: '*.jar')
 }
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         minSdkVersion 12
