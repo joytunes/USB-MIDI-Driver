@@ -55,11 +55,11 @@
         {
           "name": "midi-driver-0.1.12.1.aar",
           "url": "midi-driver-0.1.12.1.aar",
-          "size": 76791,
-          "sha512": "e852f5befdb1eedad4c76cf5ec2a1f7213ec746238858cc1757f33bf76fa59f00a2b20132d228b90b01d3542c6eb63a9776967702a8115467955046d14f9519b",
-          "sha256": "10443f080dba19104ab6f92e11c2e47a6b75c4b905e5e4b67bc9e18dfd32c87a",
-          "sha1": "4acc57401a6886c1b557fd8dbc04772e031e982f",
-          "md5": "f8b180c1fe6cd12668b0b64f52b244a1"
+          "size": 70911,
+          "sha512": "ab0a417c721ff30dcd3c14f3d12593e8ccc5fe713fb5c3f62dfbe235820cf8c4df98062390571eb52e525188a0b3397e6438081a7fad19095c77d7d04bbb7a28",
+          "sha256": "a708f189ae31dc5cb71d3b34a5658e818534a4bf898acd304c69b6a6df2a7acc",
+          "sha1": "8941036c63c1eb2480ebe75c8b8bd394cd9564fa",
+          "md5": "35a720832037feb74b9aa8cd630dcb3e"
         }
       ]
     },
@@ -104,11 +104,11 @@
         {
           "name": "midi-driver-0.1.12.1.aar",
           "url": "midi-driver-0.1.12.1.aar",
-          "size": 76791,
-          "sha512": "e852f5befdb1eedad4c76cf5ec2a1f7213ec746238858cc1757f33bf76fa59f00a2b20132d228b90b01d3542c6eb63a9776967702a8115467955046d14f9519b",
-          "sha256": "10443f080dba19104ab6f92e11c2e47a6b75c4b905e5e4b67bc9e18dfd32c87a",
-          "sha1": "4acc57401a6886c1b557fd8dbc04772e031e982f",
-          "md5": "f8b180c1fe6cd12668b0b64f52b244a1"
+          "size": 70911,
+          "sha512": "ab0a417c721ff30dcd3c14f3d12593e8ccc5fe713fb5c3f62dfbe235820cf8c4df98062390571eb52e525188a0b3397e6438081a7fad19095c77d7d04bbb7a28",
+          "sha256": "a708f189ae31dc5cb71d3b34a5658e818534a4bf898acd304c69b6a6df2a7acc",
+          "sha1": "8941036c63c1eb2480ebe75c8b8bd394cd9564fa",
+          "md5": "35a720832037feb74b9aa8cd630dcb3e"
         }
       ]
     },
@@ -124,11 +124,11 @@
         {
           "name": "midi-driver-0.1.12.1-sources.jar",
           "url": "midi-driver-0.1.12.1-sources.jar",
-          "size": 45199,
-          "sha512": "f20e8acebb93f2b3f7ea92379e232e33ebb980a62697092bf273bf6993ef6e6e008dfbf454c6fa357786bc4a3337abcd15194a29d6f5308f85c7c6bdb863d7a1",
-          "sha256": "0216f976a3a1a68a575243080bf43fec475acae9977e1495e4485d1dd2173e0f",
-          "sha1": "91f81982624bb7e5128561e05f01112bc92d1869",
-          "md5": "8123910bc674dbfcb887d43f9eaab7ae"
+          "size": 42182,
+          "sha512": "d1a1377c853ab82963668970eff1a9e3c9f3917be12e5a97064da0c21893d99c17dd0cf61473f49469435b8ba906318c6c114906978e0def7310818d9b84b6fc",
+          "sha256": "ec9e166daa8527c5e6c9de928724996884ba446122fb3ab606da9eaea3c75663",
+          "sha1": "974b386f0593afab2b8d9a20df037f0e6b2b7259",
+          "md5": "1e9ff76312824b175aa355ad2f3cc59f"
         }
       ]
     }
