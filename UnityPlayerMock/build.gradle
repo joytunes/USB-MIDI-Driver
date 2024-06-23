@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+    archiveBaseName = 'unityplayermock'
+    archiveVersion =  '0.0.1'
+}

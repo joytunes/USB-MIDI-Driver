@@ -1,25 +1,36 @@
-apply plugin: 'com.android.library'
-//apply plugin: 'android-library' // Android Studio < 0.8.0
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 repositories {
     maven {
-        url 'https://github.com/kshoji/javax.sound.midi-for-Android/raw/develop/javax.sound.midi/repository'
+        url 'https://github.com/kshoji/javax.sound.midi-for-Android/raw/master/javax.sound.midi/repository'
     }
     mavenCentral()
 }
 
 dependencies {
-    api 'jp.kshoji:javax-sound-midi:0.0.4-SNAPSHOT:@aar'
-    api 'com.android.support:support-annotations:28.0.0'
+    api 'jp.kshoji:javax-sound-midi:0.0.6@aar'
+    api 'androidx.annotation:annotation:1.7.1'
+    compileOnly project(':UnityPlayerMock')
     api fileTree(dir: 'libs', include: '*.jar')
 }
 
 android {
-    compileSdkVersion 31
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 12
+        targetSdkVersion 34
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace "jp.kshoji.driver.midi"
 
     sourceSets {
         main {
@@ -44,15 +55,46 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+
+    defaultConfig {
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
+
 }
 
-apply plugin: 'maven'
-group = 'jp.kshoji'
-uploadArchives {
-    repositories.mavenDeployer {
-        repository url: 'file://' + file('snapshots').absolutePath
-        pom.version = '0.1.5.2'
-        pom.artifactId = 'midi-driver'
+publishing {
+    publications {
+        release(MavenPublication) {
+            group = 'jp.kshoji'
+            artifactId = 'midi-driver'
+            version = '0.1.12.1'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url = "${project.projectDir}/snapshots"
+        }
     }
 }
-task install(dependsOn: uploadArchives)

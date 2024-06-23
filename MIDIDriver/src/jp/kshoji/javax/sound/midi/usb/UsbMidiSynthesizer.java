@@ -1,7 +1,7 @@
 package jp.kshoji.javax.sound.midi.usb;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.List;
 
@@ -40,19 +40,7 @@ public class UsbMidiSynthesizer implements Synthesizer {
         } catch (final MidiUnavailableException ignored) {
         }
 
-        if (receiver == null) {
-            // empty
-            channels = new MidiChannel[0];
-            voiceStatuses = new VoiceStatus[0];
-        } else {
-            // 16 channels
-            voiceStatuses = new VoiceStatus[16];
-            channels = new MidiChannel[16];
-            for (int channel = 0; channel < 16; channel++) {
-                voiceStatuses[channel] = new VoiceStatus();
-                channels[channel] = new MidiChannelImpl(channel, receiver, voiceStatuses[channel]);
-            }
-        }
+        setReceiver(receiver);
     }
 
     @NonNull
@@ -196,12 +184,18 @@ public class UsbMidiSynthesizer implements Synthesizer {
     }
 
     public void setReceiver(final Receiver receiver) {
-        // 16 channels
-        voiceStatuses = new VoiceStatus[16];
-        channels = new MidiChannel[16];
-        for (int channel = 0; channel < 16; channel++) {
-            voiceStatuses[channel] = new VoiceStatus();
-            channels[channel] = new MidiChannelImpl(channel, receiver, voiceStatuses[channel]);
+        if (receiver == null) {
+            // empty
+            channels = new MidiChannel[0];
+            voiceStatuses = new VoiceStatus[0];
+        } else {
+            // 16 channels
+            voiceStatuses = new VoiceStatus[16];
+            channels = new MidiChannel[16];
+            for (int channel = 0; channel < 16; channel++) {
+                voiceStatuses[channel] = new VoiceStatus();
+                channels[channel] = new MidiChannelImpl(channel, receiver, voiceStatuses[channel]);
+            }
         }
     }
 }
